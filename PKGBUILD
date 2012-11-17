@@ -1,16 +1,16 @@
 
 pkgname=libarchive
-pkgver=2.8.4
-pkgrel=7
+pkgver=3.0.4
+pkgrel=1
 pkgdesc="library that can create and read several streaming archive formats"
 arch=('i386' 'x86_64')
-url="http://people.freebsd.org/~kientzle/libarchive/"
+url="http://libarchive.github.com/"
 license=('BSD')
 groups=('base')
 depends=('zlib' 'bzip2')
 options=(!libtool)
-source=(http://libarchive.googlecode.com/files/libarchive-$pkgver.tar.gz)
-md5sums=('83b237a542f27969a8d68ac217dc3796')
+source=(https://github.com/downloads/libarchive/libarchive/libarchive-$pkgver.tar.gz)
+md5sums=('af443ca9a10ddbcbf00f7ae34ca7fc16')
 
 build() {
     cd $srcdir/$pkgname-$pkgver

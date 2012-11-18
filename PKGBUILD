@@ -1,14 +1,14 @@
 
 pkgname=gnupg
-pkgver=1.4.11
-pkgrel=2
+pkgver=1.4.12
+pkgrel=1
 pkgdesc="The OpenPGP part of the GNU Privacy Guard (GnuPG)"
 arch=('i386')
 license=('GPL3')
 depends=('zlib' 'bzip2' 'libedit' 'curl')
 source=(ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-$pkgver.tar.bz2)
 url="http://www.gnupg.org/"
-md5sums=('411744e1ef8ce90b87938c4203f001f1')
+md5sums=('ce3742e5c7912559cab7894ad8ba7f6b')
 
 build() {
 	cd ${srcdir}/${pkgname}-${pkgver}

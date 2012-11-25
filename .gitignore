@@ -1,4 +1,4 @@
 pkg
 src
 *.pkg.tar.gz
-tarsnap-*.tar.gz
+tarsnap-*.tgz

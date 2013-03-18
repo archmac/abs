@@ -3,7 +3,7 @@ pkgname=virtualenv
 pkgver=1.4.8
 pkgrel=1
 pkgdesc="Virtual Python Environment builder"
-arch=('i386')
+arch=('i386' 'x86_64')
 url="http://pypi.python.org/pypi/virtualenv"
 license=('MIT')
 depends=('python')
@@ -18,6 +18,4 @@ build() {
 package() {
     cd "$srcdir/$pkgname-$pkgver"
     python setup.py install --root=$pkgdir --prefix=/Library/ArchMac
-    # install -D -m644 "$srcdir/$pkgname-$pkgver/docs/license.txt" \
-    #    "$pkgdir/usr/share/licenses/virtualenv/license.txt"
 }

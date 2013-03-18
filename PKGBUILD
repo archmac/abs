@@ -1,7 +1,7 @@
 
 pkgname=gnupg
 pkgver=1.4.12
-pkgrel=1
+pkgrel=2
 pkgdesc="The OpenPGP part of the GNU Privacy Guard (GnuPG)"
 arch=('i386' 'x86_64')
 license=('GPL3')
@@ -20,8 +20,7 @@ package() {
 	cd ${srcdir}/${pkgname}-${pkgver}
 	make DESTDIR=${pkgdir} install || return 1
 
-	# remove gettext alias file because it interferes with
-	# other packages
+	rm ${pkgdir}/Library/ArchMac/share/info/dir
 	rm ${pkgdir}/Library/ArchMac/lib/charset.alias
 }
 

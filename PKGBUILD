@@ -22,5 +22,6 @@ package() {
 
 	rm ${pkgdir}/Library/ArchMac/share/info/dir
 	rm ${pkgdir}/Library/ArchMac/lib/charset.alias
+	rm ${pkgdir}/Library/ArchMac/share/locale/locale.alias
 }
 

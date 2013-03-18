@@ -1,0 +1,4 @@
+pkg
+src
+*.pkg.tar.gz
+s3cmd-*.tar.gz

@@ -1,0 +1,4 @@
+pkg
+src
+*.pkg.tar.gz
+pcre-*.tar.bz2

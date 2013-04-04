@@ -8,7 +8,6 @@ url="http://s3tools.org/s3cmd"
 license=('GPL')
 groups=()
 depends=('python')
-#options=('!libtool' '!makeflags' '!buildflags')
 source=(http://downloads.sourceforge.net/project/s3tools/$pkgname/$pkgver/$pkgname-$pkgver.tar.gz)
 md5sums=('dc62becc03a3e6100843611ebe2707c2')
 

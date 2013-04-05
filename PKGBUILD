@@ -1,7 +1,7 @@
 
 pkgname=bitlbee
 pkgver=3.2
-pkgrel=5
+pkgrel=6
 pkgdesc='Brings instant messaging (XMPP, MSN, Yahoo!, AIM, ICQ, Twitter) to IRC'
 url='http://www.bitlbee.org/'
 license=(GPL)
@@ -17,6 +17,7 @@ build() {
         --prefix=/Library/ArchMac \
         --etcdir=/Library/ArchMac/etc/bitlbee \
         --sbindir=/Library/ArchMac/bin \
+        --mandir=/Library/ArchMac/man \
         --ssl=openssl \
         --strip=0
 

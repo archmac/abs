@@ -1,7 +1,7 @@
 
 pkgname=gnupg
 pkgver=1.4.12
-pkgrel=2
+pkgrel=3
 pkgdesc="The OpenPGP part of the GNU Privacy Guard (GnuPG)"
 arch=(i386 x86_64)
 license=(GPL3)

@@ -1,14 +1,14 @@
 
 pkgname=bitlbee
 pkgver=3.2
-pkgrel=4
+pkgrel=5
 pkgdesc='Brings instant messaging (XMPP, MSN, Yahoo!, AIM, ICQ, Twitter) to IRC'
 url='http://www.bitlbee.org/'
-license=('GPL')
-arch=('i386' 'x86_64')
-depends=('openssl' 'glib2')
+license=(GPL)
+arch=(i386 x86_64)
+depends=(openssl glib2)
 source=("http://get.bitlbee.org/src/${pkgname}-${pkgver}.tar.gz")
-sha1sums=('21e17f082c776566429603b1e8c966983a75ac9e')
+sha1sums=(21e17f082c776566429603b1e8c966983a75ac9e)
 
 build() {
     cd $srcdir/$pkgname-$pkgver

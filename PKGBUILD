@@ -1,7 +1,7 @@
 
 pkgname=lua
 pkgver=5.1.4
-pkgrel=1
+pkgrel=2
 pkgdesc='A powerful light-weight programming language designed for extending applications.'
 arch=(i386 x86_64)
 license=(MIT)

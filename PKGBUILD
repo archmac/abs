@@ -1,7 +1,7 @@
 
 pkgname=bitlbee
 pkgver=3.2
-pkgrel=6
+pkgrel=7
 pkgdesc='Brings instant messaging (XMPP, MSN, Yahoo!, AIM, ICQ, Twitter) to IRC'
 url='http://www.bitlbee.org/'
 license=(GPL)

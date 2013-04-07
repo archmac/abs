@@ -1,7 +1,7 @@
 
 pkgname=gettext
 pkgver=0.18.2.1
-pkgrel=2
+pkgrel=4
 pkgdesc='GNU internationalization library'
 arch=(i386 x86_64)
 url='http://www.gnu.org/software/gettext/'
@@ -14,7 +14,8 @@ md5sums=('034c8103b14654ebd300fadac44d6f14')
 
 build() {
     cd $srcdir/$pkgname-$pkgver
-    ./configure --prefix=/Library/ArchMac
+    ./configure --prefix=/Library/ArchMac \
+                --infodir=/Library/ArchMac/info
     make
 }
 
@@ -22,7 +23,6 @@ package() {
     cd $srcdir/$pkgname-$pkgver
     make DESTDIR=$pkgdir install
 
-    rm ${pkgdir}/Library/ArchMac/share/info/dir
     rm ${pkgdir}/Library/ArchMac/share/locale/locale.alias
 }
 

@@ -1,11 +1,12 @@
 
 pkgname=nu
 pkgver=2
-pkgrel=3
+pkgrel=5
 pkgdesc='Nu'
 arch=('i386' 'x86_64')
 license=('Apache')
 url='http://programming.nu'
+install=nu.install
 source=(https://github.com/timburks/nu/archive/master.tar.gz)
 md5sums=('4e58583c8c96b7671263fbdbd5362def')
 
@@ -24,9 +25,6 @@ package() {
 
     mkdir -p $pkgdir/Library/ArchMac/frameworks
     cp -a Nu.framework $pkgdir/Library/ArchMac/frameworks
-
-    mkdir -p $pkgdir/Library/Frameworks
-    ln -s ../ArchMac/frameworks/Nu.framework $pkgdir/Library/Frameworks/Nu.framework
 
     mkdir -p $pkgdir/Library/ArchMac/share
     cp -a share/* $pkgdir/Library/ArchMac/share

@@ -1,0 +1,8 @@
+
+post_install() {
+    ln -s /Library/ArchMac/frameworks/Nu.framework /Library/Frameworks/Nu.framework
+}
+
+post_remove() {
+    rm /Library/Frameworks/Nu.framework
+}

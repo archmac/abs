@@ -8,7 +8,7 @@ license=('Apache')
 url='http://programming.nu'
 install=nu.install
 source=(https://github.com/timburks/nu/archive/master.tar.gz)
-md5sums=('4e58583c8c96b7671263fbdbd5362def')
+md5sums=('18c3c4082d88d727c3d05d95194b5f56')
 
 build() {
     cd $srcdir/nu-master

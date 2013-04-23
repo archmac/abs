@@ -27,7 +27,7 @@ package() {
     cp -a Nu.framework $pkgdir/Library/ArchMac/frameworks
 
     mkdir -p $pkgdir/Library/ArchMac/share
-    cp -a share/* $pkgdir/Library/ArchMac/share
+    cp -a share/nu $pkgdir/Library/ArchMac/share
 }
 
 check() {

@@ -7,7 +7,7 @@ arch=(i386 x86_64)
 license=(CPL)
 url="http://www.graphviz.org/"
 source=($url/pub/$pkgname/stable/SOURCES/$pkgname-$pkgver.tar.gz)
-install=graphviz.install
+install=$pkgname.install
 md5sums=(8130785a8f1fb8a57f6b839b617e85fa)
 
 build() {

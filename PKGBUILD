@@ -1,7 +1,7 @@
 
 pkgname=gnupg
 pkgver=1.4.12
-pkgrel=3
+pkgrel=4
 pkgdesc="The OpenPGP part of the GNU Privacy Guard (GnuPG)"
 arch=(i386 x86_64)
 license=(GPL3)
@@ -20,9 +20,5 @@ build() {
 package() {
 	cd $srcdir/$pkgname-$pkgver
 	make DESTDIR=$pkgdir install
-
-	rm $pkgdir/Library/ArchMac/share/info/dir
-	rm $pkgdir/Library/ArchMac/lib/charset.alias
-	rm $pkgdir/Library/ArchMac/share/locale/locale.alias
 }
 

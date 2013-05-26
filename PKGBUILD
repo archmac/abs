@@ -1,7 +1,7 @@
 
 pkgname=qemu
 pkgver=1.2.1
-pkgrel=2
+pkgrel=3
 pkgdesc='A generic and open source processor emulator which achieves a good emulation speed by using dynamic translation.'
 arch=(i386 x86_64)
 license=(GPL2 LGPL2.1)
@@ -18,6 +18,7 @@ build()
 
   ./configure --prefix=/Library/ArchMac \
               --mandir=/Library/ArchMac/man \
+              --docdir=/Library/ArchMac/doc/qemu \
               --audio-drv-list=coreaudio \
               --audio-card-list=ac97 \
               --enable-cocoa

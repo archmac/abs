@@ -1,7 +1,7 @@
 
 pkgname=pcre
 pkgver=8.32
-pkgrel=4
+pkgrel=5
 pkgdesc='A library that implements Perl 5-style regular expressions'
 arch=(i386 x86_64)
 url='http://www.pcre.org/'
@@ -14,7 +14,7 @@ build() {
     ./configure --enable-jit --enable-utf --enable-unicode-properties \
         --prefix=/Library/ArchMac \
         --mandir=/Library/ArchMac/man \
-        --docdir=/Library/ArchMac/doc/pcre
+        --docdir=/Library/ArchMac/doc/$pkgname
   make
 }
 

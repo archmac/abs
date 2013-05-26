@@ -1,7 +1,7 @@
 
 pkgname=xz
 pkgver=5.0.4
-pkgrel=1
+pkgrel=2
 pkgdesc='Library and command line tools for XZ and LZMA compressed files'
 arch=('i386' 'x86_64')
 url='http://tukaani.org/xz/'
@@ -12,9 +12,10 @@ md5sums=('df3df690aef18384e1e031be7ec3a964')
 
 build() {
     cd $srcdir/$pkgname-$pkgver
-    ./configure --prefix=/Library/ArchMac \
-        --disable-rpath \
-        --enable-werror
+    ./configure --disable-rpath --enable-werror \
+        --prefix=/Library/ArchMac \
+        --mandir=/Library/ArchMac/man \
+        --docdir=/Library/ArchMac/doc/xz
     make
 }
 

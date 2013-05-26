@@ -1,7 +1,7 @@
 
 pkgname=lua
 pkgver=5.1.4
-pkgrel=2
+pkgrel=4
 pkgdesc='A powerful light-weight programming language designed for extending applications.'
 arch=(i386 x86_64)
 license=(MIT)
@@ -18,6 +18,7 @@ build() {
 package() {
     cd $startdir/src/$pkgname-$pkgver
     make INSTALL_TOP=$pkgdir/Library/ArchMac install
+    mkdir -p $startdir/lib/pkgconfig
     install -m 644 etc/lua.pc $startdir/lib/pkgconfig/lua.pc
 #   install -D -m644 COPYRIGHT $pkgdir/Library/ArchMac/share/licenses/$pkgname/COPYRIGHT
 }

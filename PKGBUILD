@@ -4,10 +4,10 @@ pkgver=1.0.33
 pkgrel=1
 pkgdesc='An online encrypted snapshotted backup service'
 arch=('i386' 'x86_64')
-url='http://www.tarsnap.com/'
+url='https://www.tarsnap.com/'
 license=('custom')
 depends=('bzip2' 'openssl')
-source=("https://www.tarsnap.com/download/$pkgname-autoconf-$pkgver.tgz")
+source=("$url/download/$pkgname-autoconf-$pkgver.tgz")
 md5sums=('a6267972d834198716b9fe09680e47e2')
 
 build() {

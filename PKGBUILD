@@ -3,10 +3,10 @@ pkgname=tarsnap
 pkgver=1.0.35
 pkgrel=1
 pkgdesc='An online encrypted snapshotted backup service'
-arch=('i386' 'x86_64')
+arch=(i386 x86_64)
 url='https://www.tarsnap.com/'
-license=('custom')
-depends=('bzip2' 'openssl')
+license=(custom)
+depends=(bzip2 openssl)
 source=("$url/download/$pkgname-autoconf-$pkgver.tgz")
 md5sums=(74daeff5479ec6f101a903f4047b526f)
 

@@ -1,0 +1,4 @@
+pkg
+src
+*.pkg.tar.gz
+cmake-2.*.tar.gz

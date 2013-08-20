@@ -1,7 +1,7 @@
 
 pkgname=glib2
 pkgver=2.34.3
-pkgrel=2
+pkgrel=3
 pkgdesc="Common C routines used by GTK+ and other libs"
 url="http://www.gtk.org/"
 arch=('i386' 'x86_64')
@@ -23,5 +23,7 @@ build() {
 package() {
     cd $srcdir/glib-$pkgver
     make DESTDIR=$pkgdir install
+    mv $pkgdir/Library/ArchMac/share/bash-completion/completions/* \
+        $pkgdir/Library/ArchMac/share/bash-completion
 }
 

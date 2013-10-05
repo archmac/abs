@@ -1,12 +1,12 @@
 
 pkgname=gettext
 pkgver=0.18.2.1
-pkgrel=7
+pkgrel=8
 pkgdesc='GNU internationalization library'
 arch=(i386 x86_64)
 url='http://www.gnu.org/software/gettext/'
 license=(GPL)
-depends=(bash glib2)
+depends=(bash)
 optdepends=('cvs: for autopoint tool')
 options=(!docs)
 source=(ftp://ftp.gnu.org/pub/gnu/gettext/${pkgname}-${pkgver}.tar.gz)

@@ -1,50 +1,39 @@
 
 pkgname=nodejs
-pkgver=0.10.15
+pkgver=0.10.20
 pkgrel=1
 pkgdesc='Evented I/O for V8 javascript'
 arch=(i386 x86_64)
 url='http://nodejs.org/'
 license=(MIT)
-options=(!emptydirs !strip)
 source=("$url/dist/v${pkgver}/node-v${pkgver}.tar.gz")
-md5sums=(59f295b0a30dc8dbdb46407c2d9b2923)
+md5sums=(784e7d7a8e29dfec88ddb2e72a895407)
 
 build() {
-  cd node-v$pkgver
-
-  ./configure \
-    --prefix=/Library/ArchMac \
-    --without-snapshot
-#    --with-arm-float-abi=$EABI \
-#    --shared-v8 \
-#    --shared-v8-libpath=/usr/lib \
-#    --shared-v8-includes=/usr/include 
-#    --shared-openssl \
-
+  cd $srcdir/node-v$pkgver
+  ./configure --prefix=/Library/ArchMac
   make 
 }
 
 check() {
-  cd node-v$pkgver
-
-  make test || true
+  cd $srcdir/node-v$pkgver
+  ulimit -n 1024
+  make test
 }
 
 package() {
-  cd node-v$pkgver
-
+  cd $srcdir/node-v$pkgver
   make DESTDIR=$pkgdir install
 
-  # install docs as per user request
-  #install -d ${pkgdir}/usr/share/doc/nodejs
-  #cp -r doc/api/{*.html,assets} \
-    #${pkgdir}/usr/share/doc/nodejs
+  # install api docs
+  install -m755 -d $pkgdir/Library/ArchMac/doc/nodejs
+  cp -R doc/api/{*.html,assets} $pkgdir/Library/ArchMac/doc/nodejs
 
-  # compress man pages
-  #find "$pkgdir"/usr/lib/node_modules/npm/man -type f | xargs gzip -9
+  # install license
+  install -m755 -d $pkgdir/Library/ArchMac/share/licenses/nodejs
+  install -m644 LICENSE $pkgdir/Library/ArchMac/share/licenses/nodejs/LICENSE
 
-  #install -D -m644 LICENSE \
-    #${pkgdir}/usr/share/licenses/nodejs/LICENSE
+  # workaround for missing --mandir
+  mv $pkgdir/Library/ArchMac/share/man $pkgdir/Library/ArchMac/man
 }
 

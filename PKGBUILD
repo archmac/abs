@@ -6,7 +6,6 @@ pkgdesc="command line tool for uploading, retrieving, managing data in Amazon S3
 arch=('i386' 'x86_64')
 url="http://s3tools.org/s3cmd"
 license=('GPL')
-groups=()
 depends=('python')
 source=(http://downloads.sourceforge.net/project/s3tools/$pkgname/$pkgver/$pkgname-$pkgver.tar.gz)
 md5sums=('dc62becc03a3e6100843611ebe2707c2')

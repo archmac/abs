@@ -7,7 +7,7 @@ arch=(any)
 url="https://github.com/sstephenson/rbenv"
 license=(MIT)
 optdepends=(ruby-build)
-source=("https://github.com/sstephenson/rbenv/tarball/v${pkgver}")
+source=("$pkgname-$pkgver.tgz::https://github.com/sstephenson/rbenv/tarball/v${pkgver}")
 md5sums=('c1cf110b256cdab1c44e41020b57b489')
 
 build() {

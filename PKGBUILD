@@ -12,7 +12,7 @@ md5sums=('c1cf110b256cdab1c44e41020b57b489')
 
 build() {
     cd $srcdir
-    tar -x --strip-components 1 -zf "v$pkgver"
+    tar -x --strip-components 1 -zf $pkgname-$pkgver.tgz
 }
 
 package() {

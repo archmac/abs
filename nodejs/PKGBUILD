@@ -26,12 +26,12 @@ package() {
   make DESTDIR=$pkgdir install
 
   # install api docs
-  install -m755 -d $pkgdir/Library/ArchMac/doc/nodejs
-  cp -R doc/api/{*.html,assets} $pkgdir/Library/ArchMac/doc/nodejs
+  install -m755 -d $pkgdir/Library/ArchMac/doc/$pkgname/api
+  cp -R doc/api/{*.html,assets} $pkgdir/Library/ArchMac/doc/$pkgname/api
 
   # install license
-  install -m755 -d $pkgdir/Library/ArchMac/share/licenses/nodejs
-  install -m644 LICENSE $pkgdir/Library/ArchMac/share/licenses/nodejs/LICENSE
+  install -m755 -d $pkgdir/Library/ArchMac/doc/$pkgname
+  install -m644 LICENSE $pkgdir/Library/ArchMac/doc/$pkgname/LICENSE
 
   # workaround for missing --mandir
   mv $pkgdir/Library/ArchMac/share/man $pkgdir/Library/ArchMac/man

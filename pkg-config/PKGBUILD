@@ -1,7 +1,7 @@
 
 pkgname=pkg-config
 pkgver=0.28
-pkgrel=3
+pkgrel=4
 pkgdesc='A system for managing library compile/link flags'
 arch=(i386 x86_64)
 url='http://pkgconfig.freedesktop.org/wiki/'
@@ -12,6 +12,7 @@ md5sums=(aa3c86e67551adc3ac865160e34a2a0d)
 build() {
   cd $srcdir/$pkgname-$pkgver
   ./configure --with-internal-glib \
+              --with-pc-path=/usr/lib/pkgconfig \
               --prefix=/Library/ArchMac \
               --mandir=/Library/ArchMac/man \
               --docdir=/Library/ArchMac/doc/$pkgname

@@ -7,7 +7,7 @@ arch=(x86_64)
 url='http://nodejs.org/'
 license=(MIT)
 source=("$url/dist/v${pkgver}/node-v${pkgver}.tar.gz")
-md5sums=(784e7d7a8e29dfec88ddb2e72a895407)
+md5sums=(87768be7065d2120e71619948ab4bb2d)
 
 build() {
   cd $srcdir/node-v$pkgver
